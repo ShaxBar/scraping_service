@@ -7,3 +7,6 @@ def home(request):
     name = 'Sasha'
     _context = {'date': date, 'name': name}
     return render(request, 'home.html', _context)
+
+
+

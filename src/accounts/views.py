@@ -66,3 +66,4 @@ def delete_view(request):
             qs.delete()
             messages.error(request, "Пользователь успешно удален")
     return redirect('home')
+

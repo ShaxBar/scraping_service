@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
 from django.shortcuts import render
 
@@ -12,8 +13,11 @@ def home_view(request):
                   {'form': FindForm})
 
 
+# @login_required(login_url='/accounts/login')
+
 def list_view(request):
     form = FindForm
+
     city = request.GET.get('city')
     language = request.GET.get('language')
     context = {'city': city, 'language': language, 'form': FindForm}
